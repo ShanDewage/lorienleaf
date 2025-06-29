@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
 import "@/styles/Themes.css";
-import ThemeProvider from "@/components/ThemeProvider";
+import ThemeProvider from "@/styles/ThemeProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,12 +28,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Font Awesome CDN */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          // integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          // crossorigin="anonymous"
+          // referrerpolicy="no-referrer"
+        />
+
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com"> */}
+        {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+          rel="stylesheet"
+        ></link>
+      </head>
       <body className="theme-bg">
         <ThemeProvider>
           {/* {children} */}
           <Navbar />
           <main className="min-h-screen">{children}</main>
-          <ThemeToggle />
           <Footer />
         </ThemeProvider>
       </body>
