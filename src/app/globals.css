@@ -1,18 +1,34 @@
-/* src/styles/globals.css */
+/* globals.css */
 @import "tailwindcss";
 
-/* @import "tailwindcss/base"; */
-/* @import "tailwindcss/components";
-@import "tailwindcss/utilities"; */
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* === Light Mode Colors === */
+  --background: #f9fefb; /* very light green-tinted background */
+  --foreground: #1f2e1f; /* rich forest green for text */
+
+  --primary: #3b7a57; /* plant green - headings, buttons */
+  --secondary: #a3c9a8; /* minty light green - accents */
+  --accent: #e2e8ce; /* pale moss green - backgrounds */
+  --border: #cdd5cd; /* soft grey-green borders */
+
+  --card-bg: #ffffff; /* white cards or sections */
+  --muted-text: #6b8b6b; /* subtle green-grey for secondary text */
+  --link: #2f855a; /* greenish teal links */
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  /* === Dark Mode Colors === */
+  --background: #0e1a0e; /* deep green-black background */
+  --foreground: #dce9dc; /* light green-tinted white */
+
+  --primary: #7bc47f; /* light green for highlights and buttons */
+  --secondary: #4f6f4f; /* earthy green-gray */
+  --accent: #1c2b1c; /* dark moss background for sections */
+  --border: #3a4d3a; /* dark muted green border */
+
+  --card-bg: #142414; /* soft green-black card background */
+  --muted-text: #8fa98f; /* light muted green text */
+  --link: #9ae6b4; /* minty green links */
 }
 
 body {
@@ -20,4 +36,21 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: utility classes if you want to use them without Tailwind config */
+.bg-surface {
+  background-color: var(--card-bg);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-muted {
+  color: var(--muted-text);
+}
+
+.border-soft {
+  border-color: var(--border);
 }

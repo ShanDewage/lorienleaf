@@ -1,10 +1,18 @@
 "use client";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import { useState } from "react";
+import logo from "@/assets/logo.png";
+import Image from "next/image";
 
 const Navbar = () => {
+  const [language, setLanguage] = useState("ENG");
+  const [showLangDropdown, setShowLangDropdown] = useState(false);
+
+  const availableLanguages = ["ENG", "SIN"];
   return (
-    <header className="relative bg-[#f6f8fa]">
+    // <header className="relative  theme-bg theme-text">
+    <header className="fixed top-0  w-full z-50 theme-bg theme-text shadow-md">
       {/* Decorative ellipse */}
       <div
         className="absolute top-0 left-0 w-[400px] h-[400px] bg-white rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none"
@@ -16,27 +24,48 @@ const Navbar = () => {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
       >
         {/* Left: Menu and Lang/Currency */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 relative">
           <button
             aria-label="Open menu"
-            className="text-black text-xl focus:outline-none"
+            className=" text-xl focus:outline-none"
           >
             <i className="fas fa-bars"></i>
           </button>
-          <div className="flex items-center space-x-2 text-xs font-normal text-black select-none">
-            <div className="flex items-center space-x-1 cursor-pointer">
-              <span>ENG</span>
-              <i className="fas fa-chevron-down text-[8px]"></i>
-            </div>
-            <div className="flex items-center space-x-1 cursor-pointer">
-              <span>USD</span>
-              <i className="fas fa-chevron-down text-[8px]"></i>
+
+          {/* Language and Currency Selectors */}
+          <div className="flex items-center space-x-2 text-xs font-normal  select-none">
+            {/* Language Dropdown */}
+            <div className="relative">
+              <div
+                onClick={() => setShowLangDropdown(!showLangDropdown)}
+                className="flex items-center space-x-1 cursor-pointer"
+              >
+                <span>{language}</span>
+                <i className="fas fa-chevron-down text-[8px]"></i>
+              </div>
+
+              {showLangDropdown && (
+                <ul className="absolute top-full left-0 mt-1 w-20 bg-white border border-gray-200 rounded shadow-md  z-10">
+                  {availableLanguages.map((lang) => (
+                    <li
+                      key={lang}
+                      className="px-3 py-1 hover:bg-gray-100 cursor-pointer"
+                      onClick={() => {
+                        setLanguage(lang);
+                        setShowLangDropdown(false);
+                      }}
+                    >
+                      {lang}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         </div>
 
         {/* Center Left Nav Links */}
-        <ul className="hidden md:flex items-center space-x-8 text-[13px] font-semibold text-black tracking-wide">
+        <ul className="hidden md:flex items-center space-x-8 text-[13px] font-semibold  tracking-wide">
           <li>
             <Link href="/" className="hover:underline">
               HOME
@@ -58,34 +87,32 @@ const Navbar = () => {
         <Link
           href="/"
           aria-label="Botanical Plant Store Logo"
-          className="font-playfair text-[20px] font-normal text-black flex flex-col items-center leading-none select-none"
+          className="font-playfair text-[20px] font-normal  flex flex-col items-center leading-none select-none"
         >
           <div className="flex items-center space-x-1 border border-[#8db14e] px-4 py-1">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/5f0c6e1d-bfe4-412a-08aa-e6acf9a65c21.jpg"
+            {/* <Image
+              src={logo}
               alt="Green botanical leaf icon"
-              className="w-5 h-5"
-              width={20}
-              height={20}
+              width={60}
+              height={60}
               draggable="false"
-            />
-            <img
-              src="https://storage.googleapis.com/a1aa/image/3113e498-f9cd-481f-b3cf-481de138d3c5.jpg"
-              alt="Green sprout icon"
-              className="w-5 h-5"
-              width={20}
-              height={20}
-              draggable="false"
-            />
-            <span>BOTANICAL</span>
+            /> */}
+
+            <span
+              style={{ fontFamily: '"Sacramento", cursive' }}
+              className="text-green-700 font-bold text-lg "
+            >
+              {/* L💚rien L🍃af */}
+              Lorien Leaf
+            </span>
           </div>
-          <span className="text-[10px] text-[#8db14e] font-normal mt-[2px]">
+          {/* <span className="text-[10px] text-[#8db14e] font-normal mt-[2px]">
             Plant Store
-          </span>
+          </span> */}
         </Link>
 
         {/* Center Right Nav Links */}
-        <ul className="hidden md:flex items-center space-x-8 text-[13px] font-semibold text-black tracking-wide">
+        <ul className="hidden md:flex items-center space-x-8 text-[13px] font-semibold  tracking-wide">
           <li>
             <Link href="/blog" className="hover:underline">
               BLOG
@@ -104,25 +131,12 @@ const Navbar = () => {
         </ul>
 
         {/* Right Icons */}
-        <div className="flex items-center space-x-6 text-black text-lg">
+        <div className="flex items-center space-x-6  text-lg">
           <button aria-label="Search" className="focus:outline-none">
             <i className="fas fa-search"></i>
           </button>
-          <button
-            aria-label="Favorites"
-            className="relative focus:outline-none"
-          >
-            <i className="far fa-heart"></i>
-            <span className="absolute -top-1 -right-2 bg-[#8db14e] text-white text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center select-none">
-              1
-            </span>
-          </button>
-          <button aria-label="Cart" className="relative focus:outline-none">
-            <i className="fas fa-shopping-cart"></i>
-            <span className="absolute -top-1 -right-2 bg-[#8db14e] text-white text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center select-none">
-              2
-            </span>
-          </button>
+
+          <ThemeToggle />
         </div>
       </nav>
     </header>
