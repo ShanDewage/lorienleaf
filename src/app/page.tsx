@@ -5,6 +5,7 @@ import P1 from "@/assets/P1.jpg";
 import HeroSection from "@/components/HeroSection";
 import FeaturedPlants from "@/components/FeaturedPlants";
 import Newsletter from "@/components/Newsletter";
+import DailyDeals from "@/components/DailyDeals";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       {/* Featured Plants Section */}
       <FeaturedPlants />
       <Newsletter />
+      <DailyDeals />
     </main>
   );
 }
