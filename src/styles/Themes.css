@@ -18,11 +18,30 @@
 }
 
 /* Typography */
-.font-heading {
-  font-family: "Sacramento", cursive;
+.h1 {
+  font-family: "Oswald", sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 4rem;
   color: var(--primary);
+}
+.h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: var(--primary);
+}
+.font-nav {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 12;
+  letter-spacing: 1;
+  color: var(--text-primary);
+}
+.font-heading {
+  font-family: "Lato", sans-serif;
+  font-weight: "bold";
+  font-size: 14;
+  color: var(--text-secondary);
 }
 
 .font-subheading {
@@ -76,4 +95,11 @@
 
 .card-hover:hover {
   background-color: var(--accent);
+}
+.bg-card-foreground {
+  background-color: var(--accent);
+}
+
+.bg-foreground {
+  background-color: var(--foreground);
 }

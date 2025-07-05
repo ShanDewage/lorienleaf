@@ -4,52 +4,29 @@ import Image from "next/image";
 import P1 from "@/assets/P1.jpg";
 import P2 from "@/assets/P2.png";
 import P3 from "@/assets/P3.jpg";
+import { plants } from "@/data/PlantsData";
 
-const plantData = [
-  {
-    name: "Fiddle Leaf Fig",
-    price: "$29.00",
-    description: "Lush & iconic indoor tree",
-    image: P1,
-  },
-  {
-    name: "Snake Plant",
-    price: "$21.00",
-    description: "Low light & air purifying",
-    image: P2,
-  },
-  {
-    name: "Monstera",
-    price: "$35.00",
-    description: "Tropical & statement leaves",
-    image: P3,
-  },
-  {
-    name: "Monstera",
-    price: "$35.00",
-    description: "Tropical & statement leaves",
-    image: P3,
-  },
-];
-
-export default function FeaturedPlants() {
+export default function FeaturedPlants({}) {
+  const featuredPlants = plants.filter(
+    (plant) => plant.category === "featured"
+  );
   return (
     <section className="py-16 px-6  theme-bg transition-colors duration-300">
-      <h2 className="text-3xl font-serif text-center mb-10 text-black dark:text-white">
+      <h2 className="text-3xl h2 font-serif text-center mb-10 text-black dark:text-white">
         Featured Plants
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        {plantData.map((plant, i) => (
+        {featuredPlants.map((plant, i) => (
           <div
-            key={i}
+            key={plant.id}
             className="group px-6 py-6 bg-white/10 dark:bg-white/5 rounded-xl flex flex-col items-center justify-center gap-4 relative 
               after:absolute after:inset-0 after:h-full after:bg-[#abd373] after:rounded-xl after:-z-10 z-10 
-              shadow-lg after:transition-all after:duration-500 after:-translate-y-full after:hover:translate-y-0 
+              shadow-md  inset-shadow-sm after:transition-all after:duration-500 after:-translate-y-full after:hover:translate-y-0 
               overflow-hidden cursor-pointer"
           >
             {/* Image */}
-            <div className="w-full h-48 overflow-hidden rounded-lg">
+            <div className="w-full bg-card-foreground  overflow-hidden rounded-lg">
               <Image
                 src={plant.image}
                 alt={plant.name}
@@ -60,24 +37,32 @@ export default function FeaturedPlants() {
             </div>
 
             {/* Name */}
-            <p className="font-semibold text-gray-800 dark:text-gray-200 tracking-wide text-lg group-hover:text-gray-900 dark:group-hover:text-white transition-all">
+            <span className="font-heading mt-2 tracking-wide group-hover:text-gray-900 dark:group-hover:text-white transition-all">
               {plant.name}
-            </p>
+            </span>
 
             {/* Description */}
-            <p className="text-gray-600 dark:text-gray-400 text-xs text-center px-2">
-              {plant.description}
-            </p>
+            <div className=" px-2 text-secondary text-sm">
+              {/* <p className="mb-1">{plant.description}</p> */}
+              <span className="text-gray-400 line-through text-sm inline-block">
+                {plant.price !== plant.discountPrice && plant.price
+                  ? `${plant.price.toFixed(2)} LKR`
+                  : ""}
+              </span>
+              <span className="font-semibold  text-primary  text-sm inline-block ml-1">
+                {plant.discountPrice.toFixed(2)} LKR
+              </span>
+            </div>
 
             {/* Price + CTA */}
-            <div className="flex justify-between items-center w-full mt-3">
+            {/* <div className="flex justify-between items-center w-full mt-3">
               <p className="text-[#abd373] font-semibold group-hover:text-gray-800 dark:group-hover:text-white transition">
                 {plant.price}
               </p>
               <button className="bg-[#abd373] text-white text-sm font-semibold py-2 px-4 rounded-full shadow-[10px_10px_100px_#ff9f0d] group-hover:bg-white/10 transition">
                 Order Now
               </button>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

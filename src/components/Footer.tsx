@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer className="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 py-10 text-gray-800 font-sans">
+      <footer className=" border-t-2 border-[#4CAF50] mx-auto px-6 sm:px-10 md:px-16 py-10 text-gray-800 font-sans">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-sm leading-relaxed">
           {/* Contact Us */}
           <div>
@@ -134,12 +134,12 @@ function Footer() {
           className="text-center text-gray-600 text-xs mt-6 select-none"
           aria-label="Copyright notice"
         >
-          <i className="far fa-copyright"></i>Copyright 2019 by{" "}
+          <i className="far fa-copyright"></i>Copyright 2025 by{" "}
           <a
             href="#"
             className="text-[#4CAF50] hover:text-[#3a8e1a] transition-colors"
           >
-            Botanical Store
+            Lorienleaf
           </a>{" "}
           - All right reserved
         </p>

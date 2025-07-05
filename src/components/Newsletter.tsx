@@ -3,7 +3,7 @@ import React from "react";
 function Newsletter() {
   return (
     <>
-      <div className="bg-[#f3f4f2] relative overflow-x-hidden min-h-screen flex items-center justify-center px-6 py-24">
+      <div className="theme-bg relative overflow-x-hidden min-h-screen flex items-center justify-center px-6 py-24">
         <img
           alt="Large green banana leaf on the left side of the page"
           className="absolute top-0 left-0 h-[300px] w-auto object-contain select-none pointer-events-none"
