@@ -4,7 +4,7 @@
 :root {
   /* === Light Mode Colors === */
   --background: #f9fefb; /* very light green-tinted background */
-  --foreground: #1f2e1f; /* rich forest green for text */
+  --foreground: #f7f7f7; /* rich forest green for text */
 
   --primary: #3b7a57; /* plant green - headings, buttons */
   --secondary: #a3c9a8; /* minty light green - accents */
@@ -14,12 +14,15 @@
   --card-bg: #ffffff; /* white cards or sections */
   --muted-text: #6b8b6b; /* subtle green-grey for secondary text */
   --link: #2f855a; /* greenish teal links */
+
+  --text-primary: #000f07;
+  --text-secondary: #807e7e;
 }
 
 .dark {
   /* === Dark Mode Colors === */
   --background: #0e1a0e; /* deep green-black background */
-  --foreground: #dce9dc; /* light green-tinted white */
+  --foreground: #1e361e; /* light green-tinted white */
 
   --primary: #7bc47f; /* light green for highlights and buttons */
   --secondary: #4f6f4f; /* earthy green-gray */
@@ -29,6 +32,9 @@
   --card-bg: #142414; /* soft green-black card background */
   --muted-text: #8fa98f; /* light muted green text */
   --link: #9ae6b4; /* minty green links */
+
+  --text-primary: #ffffff;
+  --text-secondary: #e2e2e2;
 }
 
 body {
@@ -42,9 +48,14 @@ body {
 .bg-surface {
   background-color: var(--card-bg);
 }
-
+.bg-surface {
+  background-color: var(--card-bg);
+}
 .text-primary {
-  color: var(--primary);
+  color: var(--text-primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
 }
 
 .text-muted {
