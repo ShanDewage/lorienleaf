@@ -8,6 +8,7 @@ import Image from "next/image";
 const Navbar = () => {
   const [language, setLanguage] = useState("ENG");
   const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const availableLanguages = ["ENG", "SIN"];
   return (
@@ -24,12 +25,65 @@ const Navbar = () => {
       >
         {/* Left: Menu and Lang/Currency */}
         <div className="flex items-center space-x-4 relative">
+          {/* Mobile Hamburger Button */}
           <button
-            aria-label="Open menu"
-            className=" text-xl focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-xl md:hidden focus:outline-none z-50"
           >
-            <i className="fas fa-bars"></i>
+            <i
+              className={`fas ${isMobileMenuOpen ? "fa-times" : "fa-bars"}`}
+            ></i>
           </button>
+
+          {/* Mobile Menu Panel */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-gray-900 shadow-md border-t border-gray-200 dark:border-gray-700 z-40 transition-all">
+              <ul className="flex flex-col items-center py-6 space-y-4 text-sm font-medium text-gray-700 dark:text-gray-200">
+                <li>
+                  <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                    HOME
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/plants"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    STORE
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    ABOUT
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)}>
+                    BLOG
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/pages"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    PAGES
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    CONTACT
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
 
           {/* Language and Currency Selectors */}
           <div className="flex items-center space-x-2 text-xs font-normal  select-none">

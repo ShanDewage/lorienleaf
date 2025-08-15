@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer className=" border-t-2 border-[#4CAF50] mx-auto px-6 sm:px-10 md:px-16 py-10 text-gray-800 font-sans">
+      <footer className=" bg-tertiary mx-auto px-6 sm:px-10 md:px-16 py-10 text-gray-800 font-sans">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-sm leading-relaxed">
           {/* Contact Us */}
           <div>

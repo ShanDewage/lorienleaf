@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import FeaturedPlants from "@/components/FeaturedPlants";
 import Newsletter from "@/components/Newsletter";
 import DailyDeals from "@/components/DailyDeals";
+import WhyChoose from "@/components/WhyChoose";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <HeroSection />
       {/* Featured Plants Section */}
       <FeaturedPlants />
+      <WhyChoose/>
       <Newsletter />
       <DailyDeals />
     </main>

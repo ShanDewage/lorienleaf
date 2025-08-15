@@ -7,6 +7,7 @@ import PlantCard from "@/components/PlantCard";
 import { plants } from "@/data/PlantsData";
 function page() {
   return (
+    // bg-gradient-to-br from-green-50 via-white to-green-100
     <div className="min-h-screen theme-bg text-gray-900 px-6 py-12 mt-20 mx-auto ">
       {/* <h1 className="text-4xl font-serif font-bold text-center mb-10"> */}
       <h1 className="text-3xl h2 font-serif text-center mb-10 text-black dark:text-white">
