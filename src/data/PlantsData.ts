@@ -37,6 +37,28 @@ export const rawPlants = [
     label: "Trending",
     category: "store", // 👈
   },
+  {
+    // id: 3,
+    name: "Monstera Deliciosa",
+    description: "Loves humidity • Grows fast",
+    image: P2,
+    alt: "Monstera Deliciosa Plant with large green leaves on white background",
+    price: 50,
+    discountPrice: 39,
+    label: "Trending",
+    category: "store", // 👈
+  },
+  {
+    // id: 1,
+    name: "Fiddle Leaf Fig",
+    description: "Bright indirect light • Water weekly",
+    image: P1,
+    alt: "Fiddle Leaf Fig Plant in pot with green leaves on white background",
+    price: 40,
+    discountPrice: 29,
+    label: "Sale",
+    category: "featured", // 👈
+  },
 ];
 export const plants = rawPlants.map((plant, index) => ({
   id: index + 1,

@@ -14,7 +14,7 @@ function HeroSection() {
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-start h-[100vh] px-6 md:px-12 lg:px-24 text-left theme-bg overflow-hidden shadow-md">
       <div className="max-w-xl md:max-w-lg lg:max-w-xl z-10">
-        <h1 className="font-serif h1 text-shadow-md font-extrabold text-4xl sm:text-5xl md:text-4xl leading-tight  mb-3">
+        <h1 className="font-serif h1  font-extrabold text-4xl sm:text-5xl md:text-4xl leading-tight  mb-3">
           Houseplant
           <br />
           The Perfect Choice.

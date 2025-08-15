@@ -1,9 +1,11 @@
 import React from "react";
+import P2 from "@/assets/P2.png";
+import Image from "next/image";
 
 function page() {
   return (
     <>
-      <div className="min-h-screen px-6 py-12 theme-bg theme-text font-body">
+      <div className="min-h-screen mt-24 px-6 py-16 theme-bg theme-text font-body">
         {/* Header */}
         <section className="text-center mb-14">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-4">
@@ -31,8 +33,8 @@ function page() {
           </div>
 
           <div>
-            <img
-              src="/images/greenhouse.jpg"
+            <Image
+              src={P2}
               alt="Greenhouse"
               className="rounded-xl shadow-md border border-soft"
             />

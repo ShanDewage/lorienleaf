@@ -4,6 +4,9 @@
 :root {
   /* === Light Mode Colors === */
   --background: #f9fefb; /* very light green-tinted background */
+  --background-secondary: #e0e0e0; /* very light green-tinted background */
+  --background-tertiary: #ececec; /* very light green-tinted background */
+
   --foreground: #f7f7f7; /* rich forest green for text */
 
   --primary: #3b7a57; /* plant green - headings, buttons */
@@ -22,6 +25,9 @@
 .dark {
   /* === Dark Mode Colors === */
   --background: #0e1a0e; /* deep green-black background */
+  --background-secondary: #0f1b14; /* very light green-tinted background */
+  --background-tertiary: #0a0606; /* very light green-tinted background */
+
   --foreground: #1e361e; /* light green-tinted white */
 
   --primary: #7bc47f; /* light green for highlights and buttons */
@@ -37,31 +43,5 @@
   --text-secondary: #e2e2e2;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
-/* Optional: utility classes if you want to use them without Tailwind config */
-.bg-surface {
-  background-color: var(--card-bg);
-}
-.bg-surface {
-  background-color: var(--card-bg);
-}
-.text-primary {
-  color: var(--text-primary);
-}
-.text-secondary {
-  color: var(--text-secondary);
-}
 
-.text-muted {
-  color: var(--muted-text);
-}
-
-.border-soft {
-  border-color: var(--border);
-}
