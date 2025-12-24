@@ -1,0 +1,95 @@
+/* theme.css */
+@theme inline {
+  /* Brand */
+  --color-primary: var(--primary);
+
+  /* Backgrounds */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-text-foreground: var(--text-foreground);
+  --color-card-bg: var(--card-bg);
+
+  /* Text */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-muted-text: var(--muted-text);
+
+  /* UI */
+  --color-secondary: var(--secondary);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-link: var(--link);
+
+  /* Border */
+  --color-border-100: var(--border-100);
+  --color-border-200: var(--border-200);
+  --color-border-300: var(--border-300);
+
+  /* Fonts */
+  --font-poppins: var(--font-poppins);
+  --font-lato: var(--font-lato);
+  --font-oswald: var(--font-oswald);
+  --font-sacramento: var(--font-sacramento);
+}
+
+:root {
+  /* === Light Mode Colors === */
+  /* Backgrounds */
+  --bg-primary: #f9fefb; /* very light green-tinted background */
+  --bg-secondary: #e0e0e0; /* very light green-tinted background */
+  --bg-tertiary: #ececec; /* very light green-tinted background */
+
+  /* Core Colors */
+  --primary: #3b7a57; /* plant green - headings, buttons */
+  --secondary: #a3c9a8; /* minty light green - accents */
+  --accent: #e2e8ce; /* pale moss green - backgrounds */
+  --border: #cdd5cd; /* soft grey-green borders */
+
+  /* Surfaces */
+  --card-bg: #ffffff; /* white cards or sections */
+
+  /* Text */
+  --text-primary: #000f07;
+  --text-secondary: #807e7e;
+  --muted-text: #6b8b6b; /* subtle green-grey for secondary text */
+  --text-foreground: #f7f7f7; /* rich forest green for text */
+
+  /* Links */
+  --link: #2f855a; /* greenish teal links */
+
+  /* Border */
+  --border-100: #e5e7eb; /* Cards, dividers, table rows */
+  --border-200: #d1d5db; /* Inputs, hover states */
+  --border-300: #9ca3af; /* Selected / outline */
+}
+
+.dark {
+  /* === Dark Mode Colors === */
+  --bg-primary: #0e1a0e; /* deep green-black background */
+  --bg-secondary: #0f1b14; /* very light green-tinted background */
+  --bg-tertiary: #0a0606; /* very light green-tinted background */
+
+  /* Core Colors */
+  --primary: #7bc47f; /* light green for highlights and buttons */
+  --secondary: #4f6f4f; /* earthy green-gray */
+  --accent: #1c2b1c; /* dark moss background for sections */
+  --border: #3a4d3a; /* dark muted green border */
+
+  /* Surfaces */
+  --card-bg: #142414; /* soft green-black card background */
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #e2e2e2;
+  --muted-text: #8fa98f; /* light muted green text */
+  --text-foreground: #1e361e; /* light green-tinted white */
+
+  /* Links */
+  --link: #9ae6b4; /* minty green links */
+
+  /* Border */
+  --border-100: #2a2a2a;
+  --border-200: #3a3a3a;
+  --border-300: #525252;
+}
