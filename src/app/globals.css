@@ -1,47 +1,6 @@
 /* globals.css */
 @import "tailwindcss";
-
-:root {
-  /* === Light Mode Colors === */
-  --background: #f9fefb; /* very light green-tinted background */
-  --background-secondary: #e0e0e0; /* very light green-tinted background */
-  --background-tertiary: #ececec; /* very light green-tinted background */
-
-  --foreground: #f7f7f7; /* rich forest green for text */
-
-  --primary: #3b7a57; /* plant green - headings, buttons */
-  --secondary: #a3c9a8; /* minty light green - accents */
-  --accent: #e2e8ce; /* pale moss green - backgrounds */
-  --border: #cdd5cd; /* soft grey-green borders */
-
-  --card-bg: #ffffff; /* white cards or sections */
-  --muted-text: #6b8b6b; /* subtle green-grey for secondary text */
-  --link: #2f855a; /* greenish teal links */
-
-  --text-primary: #000f07;
-  --text-secondary: #807e7e;
-}
-
-.dark {
-  /* === Dark Mode Colors === */
-  --background: #0e1a0e; /* deep green-black background */
-  --background-secondary: #0f1b14; /* very light green-tinted background */
-  --background-tertiary: #0a0606; /* very light green-tinted background */
-
-  --foreground: #1e361e; /* light green-tinted white */
-
-  --primary: #7bc47f; /* light green for highlights and buttons */
-  --secondary: #4f6f4f; /* earthy green-gray */
-  --accent: #1c2b1c; /* dark moss background for sections */
-  --border: #3a4d3a; /* dark muted green border */
-
-  --card-bg: #142414; /* soft green-black card background */
-  --muted-text: #8fa98f; /* light muted green text */
-  --link: #9ae6b4; /* minty green links */
-
-  --text-primary: #ffffff;
-  --text-secondary: #e2e2e2;
-}
-
-
-
+@import "../styles/theme.css";
+@import "../styles/typography.css";
+@import "../styles/layout.css";
+@import "../styles/animations.css";

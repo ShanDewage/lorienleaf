@@ -1,0 +1,26 @@
+@layer components {
+  /* Default section wrapper */
+  /* .section {
+    @apply w-full max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-20;
+  } */
+
+  /* Narrow content sections (About / Care Guide text) */
+  /* .section-narrow {
+    @apply max-w-4xl mx-auto px-4 md:px-6 py-12;
+  } */
+
+  /* Muted background sections */
+  /* .section-muted {
+    @apply section bg-accent border border-border-100 rounded-2xl;
+  } */
+
+  /* Two-column layout */
+  /* .split {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12;
+  } */
+
+  /* Cards grid */
+  /* .grid-cards {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8;
+  } */
+}

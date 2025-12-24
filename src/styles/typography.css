@@ -1,0 +1,30 @@
+/* typography.css */
+
+@layer components {
+  .title-xs {
+    @apply font-oswald text-xs font-semibold text-primary;
+  }
+  .title-sm {
+    @apply font-lato text-sm font-bold text-text-secondary;
+  }
+
+  .title-base {
+    @apply font-oswald text-base font-semibold text-primary;
+  }
+
+  .title-lg {
+    @apply font-oswald text-lg font-semibold text-primary;
+  }
+
+  .title-xl {
+    @apply font-oswald text-xl font-bold text-primary;
+  }
+
+  .title-5xl {
+    @apply font-oswald text-5xl font-bold text-primary;
+  }
+
+  .title-7xl {
+    @apply font-oswald text-7xl font-bold text-primary font-serif;
+  }
+}

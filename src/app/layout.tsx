@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ThemeToggle from "@/components/ThemeToggle";
-import "@/styles/Themes.css";
-import ThemeProvider from "@/styles/ThemeProvider";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { poppins, lato, oswald, sacramento } from "@/assets/fonts/Fonts";
+import ThemeProvider from "@/context/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Lorienleaf",
@@ -27,25 +16,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        {/* Font Awesome CDN */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-          // integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-          // crossorigin="anonymous"
-          // referrerpolicy="no-referrer"
-        />
-
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Sacramento&display=swap"
-          rel="stylesheet"
-        ></link>
-      </head>
-      <body className="theme-bg">
+    <html
+      lang="en"
+      className={`
+        ${poppins.variable}
+      
+        ${lato.variable}
+        ${oswald.variable}
+        ${sacramento.variable}
+      `}
+    >
+      <head></head>
+      <body className="bg-bg-primary">
         <ThemeProvider>
-          {/* {children} */}
           <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
