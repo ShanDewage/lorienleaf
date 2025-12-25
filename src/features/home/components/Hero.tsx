@@ -10,7 +10,7 @@ function Hero() {
     router.push("/plants");
   };
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-start h-[100vh] px-6 md:px-12 lg:px-24 text-left bg-bg-primary overflow-hidden shadow-md">
+    <section className="section-hero ">
       <div className="max-w-xl md:max-w-lg lg:max-w-xl z-10">
         <h1 className="title-7xl    leading-tight  mb-3">
           Houseplant

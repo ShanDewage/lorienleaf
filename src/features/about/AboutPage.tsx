@@ -1,22 +1,21 @@
 import React from "react";
-import Image from "next/image";
+import MissionSection from "./components/MissionSection";
+import StorySection from "./components/StorySection";
+import VisualSection from "./components/VisualSection";
+import Title from "@/components/common/Title";
 
 function AboutPage() {
   return (
     <>
-      <div className="min-h-screen mt-24 px-6 py-16 bg-bg-primary text-text-foreground ">
-        {/* Header */}
-        <section className="text-center mb-14">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-text-primary mb-4">
-            About Lorien Leaf
-          </h1>
-          <p className="max-w-2xl mx-auto text-muted-text text-lg">
+      <div className="page  bg-bg-primary text-text-foreground ">
+        <section className="text-center mb-0">
+          <Title className=" mb-[12px]">About Lorien Leaf</Title>
+          <p className="max-w-2xl mx-auto text-text-muted text-lg">
             Rooted in nature. Designed with purpose. Grown with love.
           </p>
         </section>
 
-        {/* Two-column section */}
-        <section className="grid md:grid-cols-2 gap-10 items-center mb-16">
+        {/* <section className="grid md:grid-cols-2 gap-10 items-center mb-16">
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-text-primary">
               Our Mission
@@ -27,7 +26,7 @@ function AboutPage() {
               your desk or a lush Monstera in your living room, we believe
               plants bring peace, purpose, and a little bit of magic.
             </p>
-            <p className="text-muted-text">
+            <p className="text-text-muted">
               We promote sustainable growing, eco-conscious packaging, and
               natural beauty in all our plant collections.
             </p>
@@ -44,7 +43,6 @@ function AboutPage() {
           </div>
         </section>
 
-        {/* Values section */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold text-text-primary text-center mb-6">
             What We Believe In
@@ -71,18 +69,17 @@ function AboutPage() {
                 <h3 className="text-xl font-bold mb-2 text-text-primary">
                   {item.title}
                 </h3>
-                <p className="text-muted-text">{item.desc}</p>
+                <p className="text-text-muted">{item.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Call to action */}
         <section className="text-center mt-20">
           <h2 className="text-3xl font-serif font-bold text-text-primary mb-4">
             Join the Lorien Leaf Journey
           </h2>
-          <p className="max-w-xl mx-auto text-muted-text mb-6">
+          <p className="max-w-xl mx-auto text-text-muted mb-6">
             Whether you're just discovering the joy of plants or you're already
             a green-thumbed gardener, we're here to support your journey.
           </p>
@@ -92,7 +89,11 @@ function AboutPage() {
           >
             Get in Touch
           </a>
-        </section>
+        </section> */}
+
+        <MissionSection />
+        <StorySection />
+        <VisualSection />
       </div>
     </>
   );

@@ -1,12 +1,14 @@
 import { BlogPosts } from "@/data/DataBlog";
 import React from "react";
+import CategoryFilter from "./components/CategoryFilter";
+import BlogGrid from "./components/BlogGrid";
 
 function BlogPage() {
   return (
     <>
-      <div className="min-h-screen mt-24 px-4 py-16 bg-bg-primary text-text-foreground">
+      <div className="page  text-text-foreground">
         {/* Header */}
-        <div className="max-w-4xl mx-auto text-center">
+        {/* <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-serif font-bold text-text-primary mb-6">
             Plant Blog
           </h1>
@@ -15,7 +17,6 @@ function BlogPage() {
           </p>
         </div>
 
-        {/* Blog Grid */}
         <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {BlogPosts.map((post, index) => (
             <div
@@ -42,7 +43,10 @@ function BlogPage() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
+
+        <CategoryFilter />
+        <BlogGrid />
       </div>
     </>
   );

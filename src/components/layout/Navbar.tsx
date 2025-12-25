@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const availableLanguages = ["ENG", "SIN"];
   return (
-    <header className="fixed top-0  w-full z-50 bg-bg-primary text-text-foreground shadow-md">
+    <header className="fixed top-0  w-full z-50 bg-bg-primary text-text-foreground shadow-xs">
       {/* Decorative ellipse */}
       <div
         className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#7bc47f]  rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none"

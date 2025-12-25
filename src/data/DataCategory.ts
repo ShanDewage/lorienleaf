@@ -1,0 +1,15 @@
+export const CategoriesPlant = [
+  { name: "Indoor Plants", icon: "🌿" },
+  { name: "Outdoor Plants", icon: "🌳" },
+  { name: "Flowering Plants", icon: "🌸" },
+  { name: "Succulents & Cacti", icon: "🌵" },
+  { name: "Herbs", icon: "🌱" },
+  { name: "Bonsai", icon: "🎋" },
+  { name: "Air Purifying Plants", icon: "🍃" },
+  { name: "Hanging Plants", icon: "🪴" },
+  { name: "Fruit Plants", icon: "🍓" },
+  { name: "Seeds", icon: "🌰" },
+  { name: "Pots & Planters", icon: "🏺" },
+  { name: "Gardening Tools", icon: "🛠️" },
+  { name: "Soil & Fertilizers", icon: "🪱" },
+];
