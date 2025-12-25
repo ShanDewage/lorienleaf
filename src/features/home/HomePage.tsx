@@ -9,14 +9,16 @@ import CarePreview from "./components/CarePreview";
 
 function HomePage() {
   return (
-    <main className="min-h-screen bg-offWhite text-darkGreen">
+    <main className="min-h-screen  ">
       <Hero />
-      <FeaturedPlants />
-      <Categories />
-      <DailyDeals />
-      <CarePreview />
-      <WhyChoose />
-      <Newsletter />
+      <div className=" pb-24 ">
+        <FeaturedPlants />
+        <Categories limit={12} />
+        <DailyDeals />
+        <CarePreview />
+        <WhyChoose />
+        <Newsletter />
+      </div>
     </main>
   );
 }

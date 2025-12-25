@@ -1,9 +1,14 @@
 import React from "react";
+import DifficultyFilter from "./components/DifficultyFilter";
+import QuickTips from "./components/QuickTips";
 
 function CareGuidePage() {
   return (
     <>
-      <div className="min-h-screen ">page</div>
+      <div className="page  ">
+        <DifficultyFilter />
+        <QuickTips />
+      </div>
     </>
   );
 }

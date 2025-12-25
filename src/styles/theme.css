@@ -13,7 +13,7 @@
   /* Text */
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
-  --color-muted-text: var(--muted-text);
+  --color-text-muted: var(--text-muted);
 
   /* UI */
   --color-secondary: var(--secondary);
@@ -52,7 +52,7 @@
   /* Text */
   --text-primary: #000f07;
   --text-secondary: #807e7e;
-  --muted-text: #6b8b6b; /* subtle green-grey for secondary text */
+  --text-muted: #6b8b6b; /* subtle green-grey for secondary text */
   --text-foreground: #f7f7f7; /* rich forest green for text */
 
   /* Links */
@@ -82,7 +82,7 @@
   /* Text */
   --text-primary: #ffffff;
   --text-secondary: #e2e2e2;
-  --muted-text: #8fa98f; /* light muted green text */
+  --text-muted: #8fa98f; /* light muted green text */
   --text-foreground: #1e361e; /* light green-tinted white */
 
   /* Links */

@@ -1,5 +1,5 @@
 // pages/why-choose-us.tsx
-import Head from "next/head";
+import Title from "@/components/common/Title";
 import React from "react";
 
 type Feature = {
@@ -43,17 +43,9 @@ const features: Feature[] = [
 const WhyChoose = () => {
   return (
     <>
-      <Head>
-        <title>Why Choose Us | Green Haven</title>
-        <meta
-          name="description"
-          content="Discover why thousands choose Green Haven for their plant needs."
-        />
-      </Head>
-
-      <section className="bg-bg-primary py-16 px-4 sm:px-6 lg:px-8 ">
+      <section className="bg-bg-primary section ">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="  title-5xl mb-4">Why Choose Us</h1>
+          <Title>Why Choose Us</Title>
           <p className="text-gray-400 max-w-xl mx-auto">
             We’re more than just a plant store. Here’s what makes us different.
           </p>
