@@ -22,8 +22,8 @@ export const plants: Plant[] = [
     description: "Bright indirect light • Water weekly",
     image: STORE_IMAGES.PLANT01,
     alt: "Fiddle Leaf Fig Plant in pot with green leaves on white background",
-    price: 100,
-    discountPrice: 50,
+    price: 15500,
+    discountPrice: 10500,
     label: "Sale",
     category: "featured", // 👈
     inStock: true,

@@ -11,12 +11,12 @@ function HomePage() {
   return (
     <main className="min-h-screen  ">
       <Hero />
-      <div className=" pb-24 ">
+      <div className=" pb-0 ">
         <FeaturedPlants />
         <Categories limit={12} />
-        <DailyDeals />
-        <CarePreview />
         <WhyChoose />
+        <CarePreview />
+        <DailyDeals />
         <Newsletter />
       </div>
     </main>

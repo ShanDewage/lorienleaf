@@ -45,10 +45,10 @@ const WhyChoose = () => {
     <>
       <section className="bg-bg-primary section ">
         <div className="max-w-5xl mx-auto text-center">
-          <Title>Why Choose Us</Title>
-          <p className="text-gray-400 max-w-xl mx-auto">
-            We’re more than just a plant store. Here’s what makes us different.
-          </p>
+          <Title
+            title="Why Plant Lovers Choose Us"
+            subtitle=" We’re more than just a plant store. Here’s what makes us different."
+          />
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto">

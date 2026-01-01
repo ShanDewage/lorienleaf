@@ -7,6 +7,8 @@
   --color-bg-primary: var(--bg-primary);
   --color-bg-secondary: var(--bg-secondary);
   --color-bg-tertiary: var(--bg-tertiary);
+  --color-bg-100: var(--bg-100);
+
   --color-text-foreground: var(--text-foreground);
   --color-card-bg: var(--card-bg);
 
@@ -40,8 +42,10 @@
   --bg-secondary: #e0e0e0; /* very light green-tinted background */
   --bg-tertiary: #ececec; /* very light green-tinted background */
 
-  /* Core Colors */
-  --primary: #3b7a57; /* plant green - headings, buttons */
+  --bg-100: #f0fdf4; /* very light green-tinted background */
+
+  /* Core Colors 3b7a57 */
+  --primary: #00a63e;  /* plant green - headings, buttons  */
   --secondary: #a3c9a8; /* minty light green - accents */
   --accent: #e2e8ce; /* pale moss green - backgrounds */
   --border: #cdd5cd; /* soft grey-green borders */
@@ -69,6 +73,8 @@
   --bg-primary: #0e1a0e; /* deep green-black background */
   --bg-secondary: #0f1b14; /* very light green-tinted background */
   --bg-tertiary: #0a0606; /* very light green-tinted background */
+
+  --bg-100: #0f1b14; /* very light green-tinted background */
 
   /* Core Colors */
   --primary: #7bc47f; /* light green for highlights and buttons */

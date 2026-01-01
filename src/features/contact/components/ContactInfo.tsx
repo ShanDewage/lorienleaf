@@ -5,7 +5,7 @@ function ContactInfo() {
   return (
     <section className="bg-green-100 py-16">
       <div className="max-w-4xl mx-auto text-center">
-        <Title>Get in Touch</Title>
+        <Title title="Get in Touch" />
 
         <p className="text-text-muted mb-12 max-w-2xl mx-auto text-base">
           Have questions or just want to chat about your favorite plants? Reach
