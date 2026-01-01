@@ -5,14 +5,18 @@ function ContactForm() {
   return (
     <section className="bg-green-50 py-16 mt-24">
       <div className="max-w-3xl mx-auto px-6">
-        <Title>Get in Touch</Title>
+        <Title
+          title="Get in Touch"
+          subtitle="Have questions about our plants or orders? Send us a message!"
+          subtitleClassName="text-green-800 mb-8 "
+        />
 
         {/* <h2 className="text-3xl font-bold text-green-900 mb-6 text-center">
           Get in Touch
         </h2> */}
-        <p className="text-green-800 mb-8 text-center">
+        {/* <p className="text-green-800 mb-8 text-center">
           Have questions about our plants or orders? Send us a message!
-        </p>
+        </p> */}
 
         <form className="bg-white p-8 rounded-lg shadow-lg space-y-6">
           <div>
@@ -26,7 +30,7 @@ function ContactForm() {
               type="text"
               id="name"
               placeholder="Your name"
-              className="w-full border border-green-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full border   border-green-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
             />
           </div>
 

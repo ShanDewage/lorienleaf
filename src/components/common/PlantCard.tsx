@@ -1,8 +1,13 @@
 // components/PlantCard.tsx
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { IconShoppingBag } from "@tabler/icons-react";
+import {
+  IconShoppingBag,
+  IconHeart,
+  IconHeartFilled,
+} from "@tabler/icons-react";
 type PlantCardProps = {
   plant: Plant;
   hideLabel?: boolean; // hide the "Sale"/"Hot" label
@@ -16,12 +21,26 @@ function PlantCard({ plant, hideLabel }: PlantCardProps) {
     Hot: "bg-orange-500",
     Trending: "bg-blue-500",
   };
-
+  const [isFav, setIsFav] = useState(false);
   const hasDiscount = price > discountPrice;
 
   const discountRate = hasDiscount
     ? Math.round(((price - discountPrice) / price) * 100)
     : 0;
+
+  const formattedPrice = new Intl.NumberFormat("en-LK", {
+    style: "currency",
+    currency: "LKR",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(discountPrice);
+
+  const formatted = discountPrice.toLocaleString("en-LK", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
+  const [integerPart, decimalPart] = formatted.split(".");
 
   return (
     <Link href={`/store/${plant.id}`}>
@@ -40,8 +59,8 @@ function PlantCard({ plant, hideLabel }: PlantCardProps) {
         <Image
           src={image}
           alt={alt}
-          className="mx-auto object-contain bg-accent w-full max-w-[300px] max-h-[300px] pt-8"
-          width={300}
+          className="mx-auto object-contain bg-accent w-full max-w-[380px] max-h-[300px] pt-8"
+          width={320}
           height={300}
           loading="lazy"
         />
@@ -70,19 +89,47 @@ function PlantCard({ plant, hideLabel }: PlantCardProps) {
           <div className="flex items-center justify-between mt-3">
             {/* <span className="text-green-700 font-bold">${price}</span> */}
             <div className="flex flex-col gap-1">
-              <span className="font-bold text-text-primary text-lg inline-block ">
-                {discountPrice.toFixed(2)} $
-              </span>
-              <span className="text-text-muted line-through text-sm inline-block">
-                {price !== discountPrice && price
-                  ? `${price.toFixed(2)} $`
-                  : ""}
-              </span>
-              {hasDiscount && (
-                <span className="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded">
-                  -{discountRate}%
+              <div className=" flex items-start text-text-primary gap-0">
+                {/* <span className="font-medium  text-xs  ">
+                  LKR
+                </span> */}
+                <h4 className="font-bold  text-xl ">
+                  {formattedPrice}
+                  {/* {discountPrice.toFixed(2)} leading-none */}
+                  {/* {integerPart} */}
+                </h4>
+                {/* <span className="font-medium  text-xs ">
+                  {decimalPart}
+                </span> */}
+              </div>
+              <div className="flex items-center gap-2 ">
+                <span className="text-text-muted line-through text-sm inline-block">
+                  {price !== discountPrice && price
+                    ? `LKR${price.toFixed(2)}`
+                    : ""}
                 </span>
-              )}
+                {hasDiscount && (
+                  // <span className="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded">
+                  //   -{discountRate}%
+                  // </span>
+                  <span className="   text-text-primary text-sm ">
+                    (-{discountRate}% off)
+                  </span>
+                )}
+              </div>
+              {/* <span className="text-red-600 font-semibold text-sm">Only 1 left!</span> */}
+
+              <button
+                onClick={() => setIsFav(!isFav)}
+                className="absolute top-2 right-2 z-10   hover:scale-110 transition"
+                aria-label="Add to favourites"
+              >
+                {isFav ? (
+                  <IconHeartFilled size={24} className="text-red-500" />
+                ) : (
+                  <IconHeart size={24} className="text-gray-500" />
+                )}
+              </button>
             </div>
             <button
               // disabled={!inStock}

@@ -15,7 +15,11 @@ const Categories: React.FC<CategoriesProps> = ({ limit }) => {
       {/* <h2 className="text-3xl font-bold text-green-700 text-center mb-10">
         Trending on Lorienleaf
       </h2> */}
-      <Title >Trending on Lorienleaf</Title>
+      <Title title="Shop by Category"
+      subtitle="  Find the perfect plant for your space, light, and lifestyle."
+      />
+
+
       {/* <div className="flex gap-6 overscroll-none hover:overflow-x-auto flex-nowrap pb-4 scrollbar-hide"> */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-16">
         {displayedCategories.map((category, index) => (

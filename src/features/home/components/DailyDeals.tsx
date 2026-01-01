@@ -19,7 +19,11 @@ export default function DailyDeals() {
   };
   return (
     <section className="section">
-      <Title className="mb-16 ">Daily Deals</Title>
+      <Title
+        title="Today’s Plant Deals"
+        subtitle="Fresh deals that won’t last long — grab yours today."
+        // titleClassName="mb-16 "
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6  mx-auto">
         {currentItems.map((plant) => (

@@ -5,7 +5,7 @@ import Image from "next/image";
 function Newsletter() {
   return (
     <>
-      <div className="bg-bg-secondary relative overflow-x-hidden min-h-80 flex flex-col items-center justify-center px-6 ">
+      <div className="bg-bg-100 relative overflow-x-hidden min-h-80 flex flex-col items-center justify-center px-6 ">
         <Image
           alt="Large green banana leaf on the left side of the page"
           className="absolute top-0 left-0 h-[300px] w-auto object-contain select-none pointer-events-none"
@@ -22,7 +22,7 @@ function Newsletter() {
         />
         <div className=" mx-auto text-center flex flex-col items-center justify-center ">
           <h2 className=" title-5xl mb-4 relative inline-flex items-center ">
-            Subscribe Our Newsletter
+            Join Our Plant Community
           </h2>
           <span className="mx-6 flex items-center">
             <span className="block w-24 h-px bg-gray-300"></span>
@@ -43,8 +43,7 @@ function Newsletter() {
             <span className="block w-24 h-px bg-gray-300"></span>
           </span>
           <p className="text-gray-400 mb-8 text-sm sm:text-base">
-            Enter Your email address to join our mailing list and keep yourself
-            update
+            Get plant care tips, exclusive deals, and new arrivals first.
           </p>
           <form
             className="flex max-w-md mx-auto"

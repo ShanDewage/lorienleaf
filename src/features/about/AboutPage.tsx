@@ -9,7 +9,7 @@ function AboutPage() {
     <>
       <div className="page  bg-bg-primary text-text-foreground ">
         <section className="text-center mb-0">
-          <Title className=" mb-[12px]">About Lorien Leaf</Title>
+          <Title title="About Lorien Leaf" titleClassName=" mb-[12px]" />
           <p className="max-w-2xl mx-auto text-text-muted text-lg">
             Rooted in nature. Designed with purpose. Grown with love.
           </p>

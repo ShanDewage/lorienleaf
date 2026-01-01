@@ -10,10 +10,10 @@ const Navbar = () => {
 
   const availableLanguages = ["ENG", "SIN"];
   return (
-    <header className="fixed top-0  w-full z-50 bg-bg-primary text-text-foreground shadow-xs">
+    <header className="fixed top-0  w-full z-50 backdrop-blur-sm text-text-foreground shadow-xs">
       {/* Decorative ellipse */}
       <div
-        className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#7bc47f]  rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none"
+        className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#00a63e]  rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none"
         style={{ clipPath: "ellipse(400px 400px at 0 0)" }}
       />
 
@@ -51,7 +51,10 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/care-guide" className="hover:underline uppercase">
+                  <Link
+                    href="/care-guide"
+                    className="hover:underline uppercase"
+                  >
                     Care Guide
                   </Link>
                 </li>
@@ -97,7 +100,7 @@ const Navbar = () => {
                   {availableLanguages.map((lang) => (
                     <li
                       key={lang}
-                      className="px-3 py-1 hover:bg-gray-100 cursor-pointer"
+                      className="px-3 py-1 text-text-primary hover:bg-gray-100 cursor-pointer"
                       onClick={() => {
                         setLanguage(lang);
                         setShowLangDropdown(false);

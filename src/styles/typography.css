@@ -25,6 +25,6 @@
   }
 
   .title-7xl {
-    @apply font-oswald text-7xl font-bold text-primary font-serif;
+    @apply font-oswald text-7xl font-bold text-primary ;
   }
 }
