@@ -19,34 +19,37 @@ function PlantCard({ plant, hideLabel }: PlantCardProps) {
   const labelColors: Record<string, string> = {
     Sale: "bg-red-500",
     Hot: "bg-orange-500",
-    Trending: "bg-blue-500",
+    Trending: "bg-yellow-500",
   };
   const [isFav, setIsFav] = useState(false);
+  const lkrFormatter = new Intl.NumberFormat("en-LK", {
+    style: "currency",
+    currency: "LKR",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
+  const formattedDiscountPrice = lkrFormatter.format(discountPrice);
+
   const hasDiscount = price > discountPrice;
 
   const discountRate = hasDiscount
     ? Math.round(((price - discountPrice) / price) * 100)
     : 0;
 
-  const formattedPrice = new Intl.NumberFormat("en-LK", {
-    style: "currency",
-    currency: "LKR",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(discountPrice);
-
   return (
     <Link href={`/store/${plant.id}`}>
-      <div className="relative  text-left max-w-xs w-full shadow-sm  border border-border-300 hover:shadow-lg transition-all duration-300 overflow-hidden">
+      <div className="relative rounded-xs  text-left max-w-xs w-full shadow-sm  border border-border-300 hover:shadow-lg transition-all duration-300 overflow-hidden">
         {/* Label */}
-        {!hideLabel && (label === "Sale" || label === "Hot") && (
-          <div
-            className={`absolute top-2 left-0 text-white text-xs font-semibold px-2 rounded-tr-md rounded-br-md origin-left ${labelColors[label]}`}
-            style={{ transformOrigin: "left center" }}
-          >
-            {label.toUpperCase()}
-          </div>
-        )}
+        {!hideLabel &&
+          (label === "Sale" || label === "Hot" || label === "Trending") && (
+            <div
+              className={`absolute top-2 left-0 text-white text-xs font-semibold px-2 rounded-tr-md rounded-br-md origin-left ${labelColors[label]}`}
+              style={{ transformOrigin: "left center" }}
+            >
+              {label.toUpperCase()}
+            </div>
+          )}
 
         {/* Image */}
         <Image
@@ -75,7 +78,7 @@ function PlantCard({ plant, hideLabel }: PlantCardProps) {
         <div className="p-4">
           {/* {category && <p className="text-xs text-green-600 mb-1">{category}</p>} */}
 
-          <h3 className="text-base font-semibold text-text-secondary line-clamp-1">
+          <h3 className="text-base font-semibold text-text-secondary line-clamp-1 capitalize">
             {name}
           </h3>
 
@@ -87,7 +90,7 @@ function PlantCard({ plant, hideLabel }: PlantCardProps) {
                   LKR
                 </span> */}
                 <h4 className="font-bold  text-xl ">
-                  {formattedPrice}
+                  {formattedDiscountPrice}
                   {/* {discountPrice.toFixed(2)} leading-none */}
                   {/* {integerPart} */}
                 </h4>
@@ -98,7 +101,7 @@ function PlantCard({ plant, hideLabel }: PlantCardProps) {
               <div className="flex items-center gap-2 ">
                 <span className="text-text-muted line-through text-sm inline-block">
                   {price !== discountPrice && price
-                    ? `LKR${price.toFixed(2)}`
+                    ? lkrFormatter.format(price)
                     : ""}
                 </span>
                 {hasDiscount && (

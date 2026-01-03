@@ -6,6 +6,7 @@ import Newsletter from "./components/Newsletter";
 import DailyDeals from "./components/DailyDeals";
 import Categories from "./components/Categories";
 import CarePreview from "./components/CarePreview";
+import BlogPreview from "./components/BlogPreview";
 
 function HomePage() {
   return (
@@ -13,12 +14,12 @@ function HomePage() {
       <Hero />
       <div className=" mt-24 ">
         <WhyChoose />
-
         <FeaturedPlants />
-        <Categories limit={12} />
+        {/* <Categories limit={12} /> */}
         <CarePreview />
         <DailyDeals />
         <Newsletter />
+        <BlogPreview limit={3} />
       </div>
     </main>
   );

@@ -32,7 +32,7 @@ export default function Title({
       } ${containerClassName}`}
     >
       <h2
-        className={`title-5xl  capitalize mb-4 ${titleClassName}`}
+        className={`title-5xl text-shadow-sm capitalize mb-4 ${titleClassName}`}
       >
         {title}
       </h2>
@@ -44,7 +44,7 @@ export default function Title({
           <span className="block w-24 h-px bg-gray-300"></span>
           <IconCloverFilled
             size={20}
-            className="text-secondary pointer-events-none"
+            className="text-secondary text-shadow-lg  pointer-events-none"
           />
           {/* <svg
             className="mx-3 text-green-600"
