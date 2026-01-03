@@ -2,13 +2,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import ThemeToggle from "../ui/ThemeToggle";
-
+import { IconChevronDown, IconShoppingBag } from "@tabler/icons-react";
 const Navbar = () => {
   const [language, setLanguage] = useState("ENG");
   const [showLangDropdown, setShowLangDropdown] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const availableLanguages = ["ENG", "SIN"];
+  const cartItemCount = 7;
   return (
     <header className="fixed top-0  w-full z-50 backdrop-blur-sm text-text-foreground shadow-xs">
       {/* Decorative ellipse */}
@@ -91,16 +92,19 @@ const Navbar = () => {
                 onClick={() => setShowLangDropdown(!showLangDropdown)}
                 className="flex items-center space-x-1 cursor-pointer"
               >
-                <span>{language}</span>
-                <i className="fas fa-chevron-down text-[8px]"></i>
+                <span className="text-white">{language}</span>
+                <IconChevronDown
+                  size={18}
+                  className="text-white pointer-events-none"
+                />
               </div>
 
               {showLangDropdown && (
-                <ul className="absolute top-full left-0 mt-1 w-20 bg-white border border-gray-200 rounded shadow-md  z-10">
+                <ul className="absolute top-full left-0 mt-1 w-16 bg-card-bg border text-text-primary border-gray-200 rounded shadow-md  z-10">
                   {availableLanguages.map((lang) => (
                     <li
                       key={lang}
-                      className="px-3 py-1 text-text-primary hover:bg-gray-100 cursor-pointer"
+                      className="px-3 py-1  hover:bg-gray-100 cursor-pointer"
                       onClick={() => {
                         setLanguage(lang);
                         setShowLangDropdown(false);
@@ -115,7 +119,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex items-center space-x-4 relative gap-4 font-lato text-xs text-text-primary font-medium">
+        <div className="flex items-center space-x-4 relative gap-4 font-poppins text-xs text-text-primary font-medium">
           {/* Center Left Nav Links */}
           <ul className="hidden md:flex items-center space-x-8   tracking-wide">
             <li>
@@ -139,9 +143,9 @@ const Navbar = () => {
           <Link
             href="/"
             aria-label="Botanical Plant Store Logo"
-            className="font-playfair text-[20px] font-normal  flex flex-col items-center leading-none select-none"
+            className=" text-[20px] font-normal  flex flex-col items-center leading-none select-none"
           >
-            <div className="flex items-center space-x-1 border border-[#8db14e] px-4 py-1">
+            <div className="flex items-center space-x-1 rounded-xs border border-border-200 shadow-sm px-4 py-1">
               {/* <Image
               src={logo}
               alt="Green botanical leaf icon"
@@ -150,17 +154,11 @@ const Navbar = () => {
               draggable="false"
             /> */}
 
-              <span
-                style={{ fontFamily: '"Sacramento", cursive' }}
-                className="text-green-700 font-bold text-lg "
-              >
+              <span className="text-primary font-bold text-lg font-sacramento ">
                 {/* L💚rien L🍃af */}
                 Lorien Leaf
               </span>
             </div>
-            {/* <span className="text-[10px] text-[#8db14e] font-normal mt-[2px]">
-            Plant Store
-          </span> */}
           </Link>
 
           {/* Center Right Nav Links */}
@@ -183,7 +181,7 @@ const Navbar = () => {
           </ul>
         </div>
         {/* Right Icons */}
-        <div className="flex items-center justify-end space-x-6  text-lg">
+        <div className="flex items-center justify-end space-x-3  text-lg">
           {/* <div className="hidden md:block relative">
             <input
               type="text"
@@ -192,8 +190,36 @@ const Navbar = () => {
             />
             <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
           </div> */}
+          {/* <ThemeToggle /> */}
+          <span className="grid items-center text-text-primary text-xs font-semibold gap-0 ">
+            Hi!,
+            <a href="#" className="text-sm text-primary hover:underline ">
+              Sign In
+            </a>
+            {/* or
+                <a href="" className=" text-primary  ">
+             Register
+            </a> */}
+          </span>
 
-          <ThemeToggle />
+          <button className="relative  rounded-full   text-text-secondary   flex items-center  ">
+            <IconShoppingBag size={40} className=" pointer-events-none " />
+            {cartItemCount > 0 && (
+              <span
+                className="
+        absolute -top-0.5 -right-0.5
+        min-w-[18px] h-[18px]
+        px-1
+        rounded-full
+        bg-red-500
+        text-white text-xs font-bold
+        flex items-center justify-center
+      "
+              >
+                {cartItemCount}
+              </span>
+            )}
+          </button>
         </div>
       </nav>
     </header>

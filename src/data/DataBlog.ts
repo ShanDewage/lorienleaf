@@ -15,7 +15,7 @@ export const DataBlog: BlogPost[] = [
       "A curated list of beautiful low-maintenance indoor plants scientifically known to improve indoor air quality and create a calmer living space.",
     excerpt:
       "Discover the best low-maintenance plants that purify indoor air while bringing freshness and life to your home.",
-    image: "/images/ui/UI1.jpg",
+    image: "/images/blog/BL1.jpg",
     tags: ["Air Purifying", "Home Decor", "Beginner Friendly"],
     link: "#",
     content: `
@@ -99,7 +99,7 @@ Start with one or two, then slowly grow your collection 🌿
       "Learn how to grow fresh herbs right in your kitchen — perfect for cooking, health, and aroma-rich environments.",
     excerpt:
       "A beginner-friendly guide to starting your own herb garden using simple pots, natural light, and easy watering routines.",
-    image: "/images/ui/UI4.jpg",
+    image: "/images/blog/BL2.jpg",
     tags: ["Kitchen Garden", "DIY", "Beginner Plants"],
     link: "#",
     content: `
@@ -180,7 +180,7 @@ A small herb garden creates beauty, freshness, and flavor in everyday life 🍃
       "Succulents are low-maintenance, stylish plants — but they still need proper watering, sunlight, and soil conditions.",
     excerpt:
       "Succulents are easy to care for — but only when you understand watering cycles, sunlight needs, and drainage.",
-    image: "/images/ui/UI3.jpg",
+    image: "/images/blog/BL3.jpg",
     tags: ["Succulents", "Minimal Care", "Decor Plants"],
     link: "#",
     content: `
@@ -261,7 +261,7 @@ Succulents are stylish, resilient, and great for beginners — when cared for co
       "A hand-picked list of hardy outdoor plants that thrive in warm, humid, and tropical environments.",
     excerpt:
       "Choosing the right tropical outdoor plants ensures healthy growth, vibrant foliage, and long-lasting greenery.",
-    image: "/images/ui/UI5.jpg",
+    image: "/images/blog/BL4.jpg",
     tags: ["Tropical Plants", "Outdoor Garden", "Landscaping"],
     link: "#",
     content: `
@@ -326,7 +326,7 @@ Mix tall + bush plants for depth and texture 🌿
       "Learn how to multiply plants through stem cuttings, leaf propagation, and water rooting methods.",
     excerpt:
       "Propagation allows you to grow new plants for free — using cuttings, leaves, or stems.",
-    image: "/images/ui/UI6.jpg",
+    image: "/images/blog/BL5.jpg",
     tags: ["Propagation", "DIY Plants", "Home Garden"],
     link: "#",
     content: `
@@ -383,7 +383,7 @@ Propagation is fun, rewarding, and beginner-friendly 🌱
       "A modern design guide on using plants as functional interior elements that elevate aesthetics and mood.",
     excerpt:
       "Plants can act as natural décor pieces when styled with the right pots, textures, and placement.",
-    image: "/images/ui/UI2.jpg",
+    image: "/images/blog/BL6.jpg",
     tags: ["Interior Design", "Home Styling", "Decor Plants"],
     link: "#",
     content: `

@@ -2,7 +2,7 @@ import React from "react";
 
 function MissionSection() {
   return (
-    <section className="py-16 px-4 md:px-10 bg-white">
+    <section className="py-0 px-4 md:px-10 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div>

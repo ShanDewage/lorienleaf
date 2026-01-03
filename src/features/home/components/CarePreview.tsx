@@ -4,12 +4,12 @@ import React from "react";
 
 function CarePreview() {
   return (
-    <section className="section bg-bg-100 ">
+    <section className="section ">
       {/* <div className="max-w-7xl mx-auto"> */}
       <div className="text-center mb-16">
         <Title
           title="Plant Care Made Simple"
-          subtitle="Simple tips to keep your plants happy and healthy"
+          subtitle="Simple tips to keep your plants happy and healthy."
         />
       </div>
 
@@ -17,23 +17,24 @@ function CarePreview() {
         {DataCareGuide.map((guide, index) => (
           <div
             key={index}
-            className="bg-card-bg p-6 rounded-xs shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-green-100 cursor-pointer"
+            className="bg-300 flex gap-4 p-6 rounded-xs shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border-100 cursor-pointer"
           >
-            <div className="flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-3xl shadow-sm mb-5">
+            <div className="flex items-center justify-center max-w-16 w-full  rounded-xs bg-200 text-3xl shadow-sm ">
               {guide.icon}
             </div>
+            <div>
+              <h3 className="text-lg font-semibold tracking-wide font-oswald text-text-muted mb-2">
+                {guide.title}
+              </h3>
 
-            <h3 className="text-xl font-semibold text-text-primary mb-2">
-              {guide.title}
-            </h3>
+              <p className="text-base tracking-wide text-text-secondary mb-4">
+                {guide.description}
+              </p>
 
-            <p className="text-base text-text-secondary mb-4">
-              {guide.description}
-            </p>
-
-            <span className="text-sm font-semibold text-primary hover:underline">
-              Learn More →
-            </span>
+              <span className="text-sm font-semibold text-primary hover:underline">
+                Learn More →
+              </span>
+            </div>
           </div>
         ))}
       </div>

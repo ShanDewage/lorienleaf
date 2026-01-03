@@ -8,6 +8,8 @@
   --color-bg-secondary: var(--bg-secondary);
   --color-bg-tertiary: var(--bg-tertiary);
   --color-bg-100: var(--bg-100);
+  --color-bg-200: var(--bg-200);
+  --color-bg-300: var(--bg-300);
 
   --color-text-foreground: var(--text-foreground);
   --color-card-bg: var(--card-bg);
@@ -43,9 +45,10 @@
   --bg-tertiary: #ececec; /* very light green-tinted background */
 
   --bg-100: #f0fdf4; /* very light green-tinted background */
-
+  --bg-200: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+  --bg-300: linear-gradient(135deg, #f0fdf4 0%, #f5fff9 50%, #eafff2 100%);
   /* Core Colors 3b7a57 */
-  --primary: #00a63e;  /* plant green - headings, buttons  */
+  --primary: #00a63e; /* plant green - headings, buttons  */
   --secondary: #a3c9a8; /* minty light green - accents */
   --accent: #e2e8ce; /* pale moss green - backgrounds */
   --border: #cdd5cd; /* soft grey-green borders */
@@ -65,7 +68,7 @@
   /* Border */
   --border-100: #e5e7eb; /* Cards, dividers, table rows */
   --border-200: #d1d5db; /* Inputs, hover states */
-  --border-300: #9ca3af; /* Selected / outline */
+  --border-300: #d4fce2; /* Selected / outline */
 }
 
 .dark {
@@ -75,6 +78,8 @@
   --bg-tertiary: #0a0606; /* very light green-tinted background */
 
   --bg-100: #0f1b14; /* very light green-tinted background */
+  --bg-200: linear-gradient(135deg, #0f1b14 0%, #0f1b14 50%, #0f1b14 100%);
+  --bg-300: linear-gradient(135deg, #0f1b14 0%, #0f1b14 50%, #0f1b14 100%);
 
   /* Core Colors */
   --primary: #7bc47f; /* light green for highlights and buttons */
@@ -98,4 +103,11 @@
   --border-100: #2a2a2a;
   --border-200: #3a3a3a;
   --border-300: #525252;
+}
+
+.bg-200 {
+  background-image: var(--bg-200);
+}
+.bg-300 {
+  background-image: var(--bg-300);
 }

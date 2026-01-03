@@ -8,12 +8,13 @@ function AboutPage() {
   return (
     <>
       <div className="page  bg-bg-primary text-text-foreground ">
-        <section className="text-center mb-0">
-          <Title title="About Lorien Leaf" titleClassName=" mb-[12px]" />
-          <p className="max-w-2xl mx-auto text-text-muted text-lg">
-            Rooted in nature. Designed with purpose. Grown with love.
-          </p>
-        </section>
+        {/* <section className="text-center mb-0"> */}
+        <Title
+          title="About Lorien Leaf"
+          // titleClassName=" mb-[12px]"
+          subtitle="  Rooted in nature. Designed with purpose. Grown with love."
+        />
+        {/* </section> */}
 
         {/* <section className="grid md:grid-cols-2 gap-10 items-center mb-16">
           <div className="space-y-4">
@@ -90,10 +91,11 @@ function AboutPage() {
             Get in Touch
           </a>
         </section> */}
-
-        <MissionSection />
-        <StorySection />
-        <VisualSection />
+        <div className="flex flex-col gap-24">
+          <MissionSection />
+          <StorySection />
+          <VisualSection />
+        </div>
       </div>
     </>
   );

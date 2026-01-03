@@ -35,16 +35,9 @@ function PlantCard({ plant, hideLabel }: PlantCardProps) {
     maximumFractionDigits: 2,
   }).format(discountPrice);
 
-  const formatted = discountPrice.toLocaleString("en-LK", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-
-  const [integerPart, decimalPart] = formatted.split(".");
-
   return (
     <Link href={`/store/${plant.id}`}>
-      <div className="relative  text-left max-w-xs w-full shadow-sm  border border-green-100 hover:shadow-lg transition-all duration-300 overflow-hidden">
+      <div className="relative  text-left max-w-xs w-full shadow-sm  border border-border-300 hover:shadow-lg transition-all duration-300 overflow-hidden">
         {/* Label */}
         {!hideLabel && (label === "Sale" || label === "Hot") && (
           <div

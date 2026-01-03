@@ -5,7 +5,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link href={`/blog/${post.id}`}>
       <article
-        className="rounded-2xl overflow-hidden border shadow-sm
+        className="rounded-xs overflow-hidden border shadow-sm
       bg-white dark:bg-zinc-900
       border-zinc-200 dark:border-zinc-800
       hover:shadow-lg hover:-translate-y-1
