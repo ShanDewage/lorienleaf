@@ -19,7 +19,7 @@ function CarePreview() {
             key={index}
             className="bg-300 flex gap-4 p-6 rounded-xs shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border-100 cursor-pointer"
           >
-            <div className="flex items-center justify-center max-w-16 w-full  rounded-xs bg-200 text-3xl shadow-sm ">
+            <div className="flex items-center justify-center max-w-16 w-full  rounded-md bg-200 text-3xl shadow-sm ">
               {guide.icon}
             </div>
             <div>

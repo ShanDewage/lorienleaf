@@ -77,7 +77,7 @@ const WhyChoose = () => {
                   className="flex  items-center gap-6 px-6 py-4   hover:shadow-sm transition-all duration-300 hover:-translate-y-1"
                   // className="flex bg-200 items-center gap-6 px-6 py-4 border border-gray-200 rounded-xs shadow-xs hover:shadow-md transition"
                 >
-                  <div className="flex items-center justify-center max-w-12 w-full h-full  rounded-xs bg-200  shadow-sm ">
+                  <div className="flex items-center justify-center max-w-12 w-full h-full  rounded-md bg-200  shadow-sm ">
                     <Icon
                       size={30}
                       stroke={1.4}
