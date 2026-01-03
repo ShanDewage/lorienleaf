@@ -11,10 +11,11 @@ function HomePage() {
   return (
     <main className="min-h-screen  ">
       <Hero />
-      <div className=" pb-0 ">
+      <div className=" mt-24 ">
+        <WhyChoose />
+
         <FeaturedPlants />
         <Categories limit={12} />
-        <WhyChoose />
         <CarePreview />
         <DailyDeals />
         <Newsletter />

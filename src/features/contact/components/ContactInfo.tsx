@@ -5,12 +5,16 @@ function ContactInfo() {
   return (
     <section className="bg-green-100 py-16">
       <div className="max-w-4xl mx-auto text-center">
-        <Title title="Get in Touch" />
+        <Title
+          title="Get in Touch"
+          subtitle="Have questions or just want to chat about your favorite plants? Reach
+          out through any of the ways below. We’d love to connect 🌿"
+        />
 
-        <p className="text-text-muted mb-12 max-w-2xl mx-auto text-base">
+        {/* <p className="text-text-muted mb-12 max-w-2xl mx-auto text-base">
           Have questions or just want to chat about your favorite plants? Reach
           out through any of the ways below. We’d love to connect 🌿
-        </p>
+        </p> */}
 
         <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
           <div className="bg-white/70 backdrop-blur-md border border-gray-200 shadow-md rounded-lg p-6 hover:shadow-lg transition">

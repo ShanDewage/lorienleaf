@@ -11,7 +11,7 @@ function StorePage() {
     
       </div> */}
 
-      <div className="container mx-auto px-6 py-24 mt-8 ">
+      <div className="container mx-auto px-6 pt-24 mt-8 ">
         {/* <h1 className=" title-5xl  text-center mb-10 ">
           Our Plant Collection 🌱
         </h1> */}

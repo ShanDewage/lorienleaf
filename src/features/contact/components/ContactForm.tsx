@@ -8,7 +8,6 @@ function ContactForm() {
         <Title
           title="Get in Touch"
           subtitle="Have questions about our plants or orders? Send us a message!"
-          subtitleClassName="text-green-800 mb-8 "
         />
 
         {/* <h2 className="text-3xl font-bold text-green-900 mb-6 text-center">

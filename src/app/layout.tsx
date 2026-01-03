@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className="bg-bg-primary">
         <ThemeProvider>
           <Navbar />
-          <main className="min-h-screen">{children}</main>
+          <main className="min-h-screen mb-24 font-poppins">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

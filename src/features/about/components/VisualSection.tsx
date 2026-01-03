@@ -2,7 +2,7 @@ import React from "react";
 
 function VisualSection() {
   return (
-    <section className="bg-green-50 mt-24">
+    <section className="bg-green-50 mt-0">
       <div className="max-w-7xl mx-auto px-6 py-16 lg:flex lg:items-center lg:gap-12">
         {/* Text Content */}
         <div className="lg:w-1/2">
