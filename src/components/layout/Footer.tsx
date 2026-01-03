@@ -1,28 +1,52 @@
 import React from "react";
-
+import {
+  IconMail,
+  IconPhone,
+  IconMapPin,
+  IconBrandFacebook,
+  IconBrandX,
+  IconBrandPinterest,
+  IconBrandGoogle,
+  IconCopyright,
+} from "@tabler/icons-react";
+import Image from "next/image";
 function Footer() {
   return (
     <>
-      <footer className=" bg-bg-tertiary mx-auto px-6 sm:px-10 md:px-16 py-10 text-gray-800 font-sans">
+      <footer className="relative bg-bg-tertiary mx-auto px-6 sm:px-10 md:px-16 py-10 text-text-primary font-poppins">
+        <Image
+          alt="Large green plant with long leaves on the right side of the page"
+          className="absolute bottom-0  right-0 h-[300px] w-auto object-contain select-none pointer-events-none"
+          src="/images/ui/UI13.png"
+          width={300}
+          height={300}
+        />
+        <Image
+          alt="Large green plant with long leaves on the right side of the page"
+          className="absolute bottom-0  left-0 h-[180px] w-auto object-contain select-none pointer-events-none"
+          src="/images/ui/UI14.png"
+          width={300}
+          height={300}
+        />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-sm leading-relaxed">
           {/* Contact Us */}
           <div>
             <h3 className="font-semibold text-xs uppercase mb-4">Contact Us</h3>
-            <ul className="space-y-3 text-gray-800">
+            <ul className="space-y-3 text-text-secondary">
               <li className="flex items-start gap-2">
-                <i className="fas fa-map-marker-alt mt-[3px] text-gray-700"></i>
-                <span>
-                  <strong>Address:</strong> London Oxford Street, 012 United
-                  Kingdom.
-                </span>
+                {/* <i className="fas fa-map-marker-alt mt-[3px] text-gray-700"></i> */}
+                <IconMapPin stroke={1} size={20} />
+
+                <span>High St, Moffat, Dumfriesshire.</span>
               </li>
               <li className="flex items-center gap-2">
-                <i className="fas fa-phone-alt text-gray-700"></i>
-                <span>Phone : (+032) 3456 7890</span>
+                <IconPhone stroke={1} size={20} />
+
+                <span> (+032) 302 9606</span>
               </li>
               <li className="flex items-center gap-2">
-                <i className="fas fa-envelope text-gray-700"></i>
-                <span>Email: Botanicalstore@gmail.com</span>
+                <IconMail stroke={1} size={20} />
+                <span> Lorienleaf@info.com</span>
               </li>
               <li className="flex items-center gap-2 mt-3">
                 <strong>Follow us:</strong>
@@ -31,28 +55,28 @@ function Footer() {
                   className="text-[#4CAF50] hover:text-[#3a8e1a] transition-colors"
                   aria-label="Facebook"
                 >
-                  <i className="fab fa-facebook-f"></i>
+                  <IconBrandFacebook stroke={1} size={20} />
                 </a>
                 <a
                   href="#"
                   className="text-gray-500 hover:text-gray-700 transition-colors"
                   aria-label="Twitter"
                 >
-                  <i className="fab fa-twitter"></i>
+                  <IconBrandX stroke={1} size={20} />
                 </a>
                 <a
                   href="#"
                   className="text-gray-500 hover:text-gray-700 transition-colors"
                   aria-label="Pinterest"
                 >
-                  <i className="fab fa-pinterest-p"></i>
+                  <IconBrandPinterest stroke={1} size={20} />
                 </a>
                 <a
                   href="#"
                   className="text-gray-500 hover:text-gray-700 transition-colors"
                   aria-label="Google Plus"
                 >
-                  <i className="fab fa-google-plus-g"></i>
+                  <IconBrandGoogle stroke={1} size={20} />
                 </a>
               </li>
             </ul>
@@ -63,7 +87,7 @@ function Footer() {
             <h3 className="font-semibold text-xs uppercase mb-4">
               Information
             </h3>
-            <ul className="space-y-3 text-gray-500">
+            <ul className="space-y-3 text-text-secondary">
               <li>New Products</li>
               <li>Top Sellers</li>
               <li>Our Blog</li>
@@ -75,7 +99,7 @@ function Footer() {
           {/* My Account */}
           <div>
             <h3 className="font-semibold text-xs uppercase mb-4">My Account</h3>
-            <ul className="space-y-3 text-gray-500">
+            <ul className="space-y-3 text-text-secondary">
               <li>My account</li>
               <li>Discount</li>
               <li>Orders history</li>
@@ -88,28 +112,28 @@ function Footer() {
             <h3 className="font-semibold text-xs uppercase mb-4">
               Popular Tag
             </h3>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 text-text-secondary">
               <button
                 type="button"
-                className="text-gray-600 border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
+                className=" border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
               >
                 Trend
               </button>
               <button
                 type="button"
-                className="text-gray-600 border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
+                className=" border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
               >
                 Decor
               </button>
               <button
                 type="button"
-                className="text-gray-600 border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
+                className=" border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
               >
                 Plant
               </button>
               <button
                 type="button"
-                className="text-gray-600 border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
+                className=" border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
               >
                 Table tree
               </button>
@@ -121,7 +145,7 @@ function Footer() {
               </button>
               <button
                 type="button"
-                className="text-gray-600 border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
+                className=" border border-gray-300 rounded-full px-4 py-1 text-xs hover:bg-gray-100"
               >
                 Living room
               </button>
@@ -131,17 +155,21 @@ function Footer() {
 
         <hr className="border-t border-gray-300 mt-10" />
         <p
-          className="text-center text-gray-600 text-xs mt-6 select-none"
+          className="text-center text-text-secondary text-xs mt-6 gap-1 select-none flex items-center justify-center"
           aria-label="Copyright notice"
         >
-          <i className="far fa-copyright"></i>Copyright 2025 by{" "}
+          <span className="flex gap-1">
+            Copyright
+            <IconCopyright stroke={1} size={16} />
+            2025 by{" "}
+          </span>
           <a
             href="#"
             className="text-[#4CAF50] hover:text-[#3a8e1a] transition-colors"
           >
-            Lorienleaf
+            Lorienleaf.
           </a>{" "}
-          - All right reserved
+          All Rights Reserved.
         </p>
       </footer>
     </>
