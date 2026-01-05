@@ -1,0 +1,8 @@
+/* ContactPage.css */
+.cpInput {
+  @apply w-full border text-text-primary   border-border-200 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400;
+}
+
+.cpLabel {
+  @apply block text-primary font-medium mb-2;
+}

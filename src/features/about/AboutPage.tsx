@@ -3,95 +3,52 @@ import MissionSection from "./components/MissionSection";
 import StorySection from "./components/StorySection";
 import VisualSection from "./components/VisualSection";
 import Title from "@/components/common/Title";
+import Image from "next/image";
 
 function AboutPage() {
   return (
     <>
-      <div className="page  bg-bg-primary text-text-foreground ">
-        {/* <section className="text-center mb-0"> */}
-        <Title
-          title="About Lorien Leaf"
-          // titleClassName=" mb-[12px]"
+      <div className="page">
+        {/* <Title
+          title="About LorienLeaf"
           subtitle="  Rooted in nature. Designed with purpose. Grown with love."
-        />
-        {/* </section> */}
+        /> */}
+        <section
+          className="rounded-xs bg-300
+                px-8 py-12 shadow-sm flex flex-col text-left justify-center "
+        >
+          <p className="text-sm uppercase tracking-widest text-primary">
+            About LorienLeaf
+          </p>
 
-        {/* <section className="grid md:grid-cols-2 gap-10 items-center mb-16">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-text-primary">
-              Our Mission
-            </h2>
-            <p className="leading-relaxed text-lg">
-              At <strong>Lorien Leaf</strong>, our mission is to bring nature
-              closer to your everyday life. Whether it's a tiny succulent on
-              your desk or a lush Monstera in your living room, we believe
-              plants bring peace, purpose, and a little bit of magic.
-            </p>
-            <p className="text-text-muted">
-              We promote sustainable growing, eco-conscious packaging, and
-              natural beauty in all our plant collections.
-            </p>
-          </div>
+          <Title
+            title="Rooted. Loved. Green. 🌵"
+            showUnderline={false}
+            containerClassName="mb-[0] mt-4"
+            titleClassName="text-text-primary"
+            align="left"
+          />
 
-          <div>
+          <p className="mt-2 text-text-muted  tracking-wide text-sm md:text-base max-w-3xl">
+            {/* Rooted in nature. Designed with purpose. Grown with love. */}
+            At LorienLeaf, we’re passionate about bringing lush, healthy plants
+            into your home. From care tips to beautiful greenery, we’re here to
+            inspire plant lovers everywhere.
+          </p>
+
+          <div className="absolute   w-full top-0 left-[16%]">
             <Image
-              src="/images/ui/UI2.png"
-              alt="Greenhouse"
-              className="rounded-xl shadow-md border border-border-100"
-              width={800}
-              height={600}
+              src="/images/ui/UI16.png"
+              alt="Large green houseplant"
+              width={720}
+              height={720}
+              className="w-full min-h-[80vh] max-h-[100vh] object-contain "
+              priority
             />
           </div>
         </section>
 
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-text-primary text-center mb-6">
-            What We Believe In
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "🌱 Sustainability",
-                desc: "We source responsibly and use eco-friendly materials to protect the planet.",
-              },
-              {
-                title: "🌼 Beauty in Simplicity",
-                desc: "Nature is elegant. We showcase it with minimalist and intentional design.",
-              },
-              {
-                title: "🪴 Growth & Care",
-                desc: "We help people grow—plants, skills, and mindfulness alike.",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-card-bg border border-border-100 p-6 rounded-lg shadow-sm transition hover:shadow-md"
-              >
-                <h3 className="text-xl font-bold mb-2 text-text-primary">
-                  {item.title}
-                </h3>
-                <p className="text-text-muted">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="text-center mt-20">
-          <h2 className="text-3xl font-serif font-bold text-text-primary mb-4">
-            Join the Lorien Leaf Journey
-          </h2>
-          <p className="max-w-xl mx-auto text-text-muted mb-6">
-            Whether you're just discovering the joy of plants or you're already
-            a green-thumbed gardener, we're here to support your journey.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-primary text-white px-6 py-3 rounded-md hover:bg-green-800 transition"
-          >
-            Get in Touch
-          </a>
-        </section> */}
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-24 mt-16">
           <MissionSection />
           <StorySection />
           <VisualSection />

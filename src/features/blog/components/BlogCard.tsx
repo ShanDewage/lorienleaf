@@ -6,7 +6,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
     <Link href={`/blog/${post.id}`}>
       <article
         className="rounded-xs overflow-hidden border shadow-sm
-      bg-card-bg 
+      bg-card-bg  
       border-border-300 
       hover:shadow-lg hover:-translate-y-1
       transition-all duration-300"

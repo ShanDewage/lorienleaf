@@ -1,66 +1,80 @@
 import Title from "@/components/common/Title";
 import React from "react";
+import {
+  IconMail,
+  IconPhone,
+  IconMapPin,
+  IconClockHour5,
+} from "@tabler/icons-react";
 
 function ContactInfo() {
   return (
-    <section className="bg-green-100 py-16">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="min-h-auto  section bg-transparent   py-0 px-0 flex  items-center">
+      <div className="w-full mx-auto ">
         <Title
-          title="Get in Touch"
-          subtitle="Have questions or just want to chat about your favorite plants? Reach
-          out through any of the ways below. We’d love to connect 🌿"
+          title="Contact Details"
+          subtitle="You can reach us through any of the options below."
+          align="left"
+          showUnderline={false}
+          containerClassName="mb-[32]"
         />
 
-        {/* <p className="text-text-muted mb-12 max-w-2xl mx-auto text-base">
-          Have questions or just want to chat about your favorite plants? Reach
-          out through any of the ways below. We’d love to connect 🌿
-        </p> */}
-
-        <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          <div className="bg-white/70 backdrop-blur-md border border-gray-200 shadow-md rounded-lg p-6 hover:shadow-lg transition">
-            <div className="flex items-center space-x-4 mb-3">
-              <i className="fas fa-envelope text-green-600 text-2xl"></i>
-              <h2 className="text-xl font-semibold text-gray-800">Email</h2>
+        <div className="flex flex-col gap-8 mx-auto">
+          <div className="bg-300 flex gap-4 text-left backdrop-blur-md border border-border-100 shadow-md rounded-lg p-6 hover:shadow-lg transition">
+            <div className="flex items-center gap-2 text-text-muted ">
+              <IconMail size={48} stroke={2} />
             </div>
-            <p className="text-gray-600 text-sm">hello@lorienleaf.com</p>
+            <div className=" text-text-muted  ">
+              <h2 className="text-xl font-semibold font-oswald mb-2 ">Email</h2>
+              <p className="text-text-secondary text-base">
+                hello@lorienleaf.com
+              </p>
+            </div>
           </div>
 
-          <div className="bg-white/70 backdrop-blur-md border border-gray-200 shadow-md rounded-lg p-6 hover:shadow-lg transition">
-            <div className="flex items-center space-x-4 mb-3">
-              <i className="fas fa-phone-alt text-green-600 text-2xl"></i>
-              <h2 className="text-xl font-semibold text-gray-800">Phone</h2>
+          <div className="bg-300 flex gap-4 text-left backdrop-blur-md border border-border-100 shadow-md rounded-lg p-6 hover:shadow-lg transition">
+            <div className="flex items-center gap-2 text-text-muted ">
+              <IconPhone size={48} stroke={2} />
             </div>
-            <p className="text-gray-600 text-sm">+94 77 123 4567</p>
+
+            <div className=" text-text-muted  ">
+              <h2 className="text-xl font-semibold font-oswald mb-2">Phone</h2>
+              <p className="text-text-secondary text-base">+94 77 123 4567</p>
+            </div>
           </div>
 
-          <div className="bg-white/70 backdrop-blur-md border border-gray-200 shadow-md rounded-lg p-6 hover:shadow-lg transition col-span-2">
-            <div className="flex items-center space-x-4 mb-3">
-              <i className="fas fa-map-marker-alt text-green-600 text-2xl"></i>
-              <h2 className="text-xl font-semibold text-gray-800">
+          <div className="bg-300 flex gap-4 text-left backdrop-blur-md border border-border-100 shadow-md rounded-lg p-6 hover:shadow-lg transition col-span-2">
+            <div className="flex items-center gap-2 text-text-muted ">
+              <IconMapPin size={48} stroke={2} />
+            </div>
+            <div className=" text-text-muted  ">
+              <h2 className="text-xl font-semibold font-oswald mb-2">
                 Store Location
               </h2>
+              <p className="text-text-secondary text-base">
+                Lorien Leaf Plant Store,
+                <br />
+                123 Botanical Street, Colombo,
+                <br />
+                Sri Lanka.
+              </p>
             </div>
-            <p className="text-gray-600 text-sm">
-              Lorien Leaf Plant Store
-              <br />
-              123 Botanical Street,
-              <br />
-              Colombo, Sri Lanka
-            </p>
           </div>
 
-          <div className="bg-white/70 backdrop-blur-md border border-gray-200 shadow-md rounded-lg p-6 hover:shadow-lg transition col-span-2">
-            <div className="flex items-center space-x-4 mb-3">
-              <i className="fas fa-clock text-green-600 text-2xl"></i>
-              <h2 className="text-xl font-semibold text-gray-800">
+          <div className="bg-300 flex gap-4 text-left backdrop-blur-md border border-border-100 shadow-md rounded-lg p-6 hover:shadow-lg transition col-span-2">
+            <div className="flex items-center gap-2 text-text-muted ">
+              <IconClockHour5 size={48} stroke={2} />
+            </div>
+            <div className=" text-text-muted ">
+              <h2 className="text-xl font-semibold font-oswald mb-2">
                 Opening Hours
               </h2>
+              <p className="text-text-secondary text-base">
+                Monday – Saturday: 9:00 AM – 6:00 PM
+                <br />
+                Sunday: Closed
+              </p>
             </div>
-            <p className="text-gray-600 text-sm">
-              Monday – Saturday: 9:00 AM – 6:00 PM
-              <br />
-              Sunday: Closed
-            </p>
           </div>
         </div>
       </div>
