@@ -23,7 +23,7 @@ export default function PlantDetailPage() {
     : 0;
 
   return (
-    <div className="max-w-4xl mx-auto min-h-screen mt-24 px-6 py-16">
+    <div className=" page">
       <button
         onClick={() => router.back()}
         className="mb-4 text-green-600 hover:underline"

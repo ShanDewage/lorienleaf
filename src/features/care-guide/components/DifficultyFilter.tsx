@@ -18,11 +18,11 @@ export default function DifficultyFilter({ active, onChange }: Props) {
           key={f.id}
           onClick={() => onChange(f.id)}
           className={`
-            px-4 py-2 rounded-full text-sm border transition-all
+            px-6 py-2 text-text-primary rounded-full text-sm border shadow-xs transition-all
             ${
               active === f.id
-                ? "bg-green-700 text-white border-green-700"
-                : "border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                ? "bg-primary text-white border-border-300 "
+                : "border-border-200  hover:bg-bg-100 "
             }
           `}
         >
