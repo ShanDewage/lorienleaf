@@ -20,11 +20,11 @@ export default function CategoryFilter({ value, onChange }: Props) {
           key={cat.id}
           onClick={() => onChange(cat.id)}
           className={`
-            px-4 py-2 rounded-full text-sm border transition-all
+             px-6 py-2 text-text-primary rounded-full text-sm border shadow-xs transition-all
             ${
               value === cat.id
-                ? "bg-green-700 text-white border-green-700"
-                : "border-zinc-300 text-text-primary dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                ? "bg-primary text-white border-border-300"
+                : "border-border-200  hover:bg-bg-100"
             }
           `}
         >

@@ -5,9 +5,9 @@ export default function FeaturedPost() {
 
   return (
     <article
-      className="rounded-3xl overflow-hidden border shadow-sm
-      bg-white dark:bg-zinc-900
-      border-zinc-200 dark:border-zinc-800
+      className="rounded-xs overflow-hidden border shadow-sm
+      bg-card-bg
+      border-border-100
       grid md:grid-cols-2"
     >
       <img
@@ -18,23 +18,23 @@ export default function FeaturedPost() {
 
       <div className="p-8 flex flex-col justify-center">
         <span
-          className="text-xs px-3 py-1 rounded-full w-fit
-          bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
+          className="text-xs px-3 py-1 rounded-full shadow-xs
+          bg-200 text-primary border border-border-300 w-fit"
         >
           Featured
         </span>
 
-        <h2 className="text-2xl md:text-3xl font-bold mt-3 text-text-primary">
+        <h2 className="text-2xl md:text-4xl font-bold mt-3 font-oswald text-text-primary">
           {featured.title}
         </h2>
 
-        <p className="text-sm text-text-muted mt-1">{featured.date}</p>
+        <p className="text-xs text-text-muted mt-1">{featured.date}</p>
 
-        <p className="mt-3 text-text-secondary">{featured.excerpt}</p>
+        <p className="mt-3 text-base text-text-secondary">{featured.excerpt}</p>
 
         <a
           href={featured.link}
-          className="mt-4 font-medium hover:underline text-green-700"
+          className="mt-4 font-medium hover:underline text-primary"
         >
           Read article →
         </a>

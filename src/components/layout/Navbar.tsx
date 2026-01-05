@@ -190,7 +190,7 @@ const Navbar = () => {
             />
             <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
           </div> */}
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
           <span className="grid items-center text-text-primary text-xs font-semibold gap-0 ">
             Hi!,
             <a href="#" className="text-sm text-primary hover:underline ">

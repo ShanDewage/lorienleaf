@@ -10,9 +10,9 @@ export default function QuickTips() {
 
   return (
     <div
-      className="rounded-2xl p-8 border
-      bg-green-50 dark:bg-zinc-900
-      border-green-200 dark:border-zinc-800"
+      className="rounded-xs p-8 border
+      bg-200 shadow-sm
+      border-border-100"
     >
       <h2 className="text-2xl font-bold text-text-primary">Quick Care Tips</h2>
 
